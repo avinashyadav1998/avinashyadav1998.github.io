@@ -1,0 +1,122 @@
+/* Styleswitcher - box */
+
+#style-switcher {
+	position: fixed;
+	top: 0;
+	right: -175px;
+	width: 175px;
+	margin-top: 160px;
+	z-index: 2200;
+	color: #333;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	-webkit-border-bottom-left-radius: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	border-bottom-left-radius: 2px;
+}
+
+/* Styleswitcher - trigger */
+
+#style-switcher .ss-toggle {
+	position: absolute;
+	top: 0;
+	left: -36px;
+	width: 36px;
+	height: 66px;
+	display:block;
+	color: rgb(255,255,255);
+	text-align: center;
+	cursor: pointer;
+	-webkit-border-top-left-radius: 2px;
+	-webkit-border-bottom-left-radius: 2px;
+	-moz-border-radius-topleft: 2px;
+	-moz-border-radius-bottomleft: 2px;
+	border-top-left-radius: 2px;
+	border-bottom-left-radius: 2px;
+	-webkit-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	-moz-box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+	box-shadow: 0px 0px 30px 0px rgba(0,0,0,0.1);
+}
+
+#style-switcher .ss-toggle:hover,
+#style-switcher .ss-toggle:focus {
+}
+
+#style-switcher .ss-toggle i {
+	margin-top: 26px;
+	font-size: 12px;
+}
+
+/* Styleswitcher - options */
+
+#style-switcher ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#style-switcher .ss-label {
+	display: block;
+	font-weight: 500;
+	font-size: 10px;
+	text-transform: uppercase;
+	padding: 12px;
+	border-bottom: 1px solid #e7e7e7;
+}
+
+#color-switcher > li:not(:last-child) {
+	border-bottom: 1px solid #e7e7e7;
+}
+
+#color-switcher a {
+	position: relative;
+	display: block;
+	padding: 12px 12px 12px 42px;
+	line-height: 1;
+}
+
+#color-switcher a:before {
+	position: absolute;
+	top: 10px;
+	left: 12px;
+	display: block;
+	width: 21px;
+	height: 21px;
+	content: ' ';
+	border: 1px solid #e6e6e6;
+	border-radius: 50%;
+}
+
+#color-switcher > li > a > span {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	margin: 0 1px;
+}
+
+#color-switcher a:after {
+	position: absolute;
+	top: 15px;
+	left: 17px;
+	font-family: "FontAwesome";
+	font-weight: 100;
+	font-size: 10px;
+	content:  "\f00c";
+	color: #282828;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	-webkit-transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	transform: scale(0.5);
+	-webkit-transform: scale(0.5);
+}
+
+#color-switcher a.active:after {
+	visibility: visible;
+	opacity: 1;
+	transform: scale(1);
+	-webkit-transform: scale(1);
+}
